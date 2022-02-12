@@ -3,14 +3,16 @@
 ##### 以下はWindowsで開発することを前提とした環境の構築手順です。  
 
 ## ◆使用ソフトウェア
-|ソフト名| |説明|
-|----|----|----|
-|XAMPP|[![alt](/img/trasition.png)](https://sourceforge.net/projects/xampp/files/)|PHP v.5.6～v.7.4のものを使用。|
-|Composer|[![alt](/img/trasition.png)](https://getcomposer.org/)|PHPコマンドでダウンロード。|
+|ソフト/FW|参照先|
+|----|----|
+|XAMPP|[https://www.apachefriends.org/jp/index.html](https://www.apachefriends.org/jp/index.html)|
+|Composer|[https://getcomposer.org/](https://getcomposer.org/)|
+|CakePHP3|[https://cakephp.org/jp](https://cakephp.org/jp)[![alt](/img/trasition.png)](https://book.cakephp.org/3/ja/index.html)|
 
 ## ◆XAMPPインストール
-[こちら](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.4.27/) からXAMPPのzip形式をダウンロード、解凍して C:\xampp に配置する。  
-※今回は [xampp-portable-windows-x64-7.4.27-2-VC15.zip](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.4.27/xampp-portable-windows-x64-7.4.27-2-VC15.zip/download) を使用。
+[こちら](https://sourceforge.net/projects/xampp/files/) からXAMPPのzip形式をダウンロード、解凍して C:\xampp に配置する。  
+※今回は [xampp-portable-windows-x64-7.4.27-2-VC15.zip](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.4.27/xampp-portable-windows-x64-7.4.27-2-VC15.zip/download) を使用。  
+※PHPのバージョンが5.6〜7.4でない場合、CakePHP3のプロジェクトが作成できない。
 
 ## ◆Composerインストール
 
@@ -36,7 +38,7 @@ C:\xampp\php\php.ini の以下の行をコメントアウトする。
     extension=intl
 
 ## ◆CakePHP3のプロジェクト作成
-xampp-control.exeのshellを起動して以下のコマンドを実行してプロジェクトを作成する。(v.3.8を指定した場合)
+xampp-control.exeのshellを起動して以下のコマンドを実行してプロジェクトを作成する。(v.3系を指定しない場合、デフォルトはv.4系で構築される)
 
     # php C:\xampp\composer.phar create-project --prefer-dist cakephp/app:^3.8 <プロジェクト名>
 
