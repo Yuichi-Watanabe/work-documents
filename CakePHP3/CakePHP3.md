@@ -3,20 +3,18 @@
 ##### 以下はWindowsで開発することを前提とした環境の構築手順です。  
 
 ## ◆使用ソフトウェア
-|ソフト名|説明|
-|----|----|
-|XAMPP|PHP v.5.6～v.7.4のものを使用。[![alt](/img/trasition.png)](https://sourceforge.net/projects/xampp/files/)|
-|Composer|PHPコマンドでダウンロード。[![alt](/img/trasition.png)](https://getcomposer.org/)|
-
+|ソフト名| |説明|
+|----|----|----|
+|XAMPP|[![alt](/img/trasition.png)](https://sourceforge.net/projects/xampp/files/)|PHP v.5.6～v.7.4のものを使用。|
+|Composer|[![alt](/img/trasition.png)](https://getcomposer.org/)|PHPコマンドでダウンロード。|
 
 ## ◆XAMPPインストール
-[こちら![alt](/img/trasition.png)](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.4.27/) からXAMPPのzip形式をダウンロード、解凍して C:\xampp に配置する。  
+[こちら](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.4.27/) からXAMPPのzip形式をダウンロード、解凍して C:\xampp に配置する。  
 ※今回は [xampp-portable-windows-x64-7.4.27-2-VC15.zip](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.4.27/xampp-portable-windows-x64-7.4.27-2-VC15.zip/download) を使用。
 
 ## ◆Composerインストール
 
-xampp-control.exeを起動。  
-shellを起動して以下のコマンドを実行。  
+xampp-control.exeのshellを起動して以下のコマンドを実行。  
 
     # php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
@@ -38,7 +36,7 @@ C:\xampp\php\php.ini の以下の行をコメントアウトする。
     extension=intl
 
 ## ◆CakePHP3のプロジェクト作成
-xampp-control.exeのshellを起動して以下のコマンドを実行してプロジェクトを作成する。
+xampp-control.exeのshellを起動して以下のコマンドを実行してプロジェクトを作成する。(v.3.8を指定した場合)
 
     # php C:\xampp\composer.phar create-project --prefer-dist cakephp/app:^3.8 <プロジェクト名>
 
@@ -47,4 +45,4 @@ xampp-control.exeのshellを起動して以下のコマンドを実行してプ�
 
     # bin\cake server
 
-起動後、[こちら](http://localhost:8765/) をアクセスする。
+起動後、[http://localhost:8765](http://localhost:8765/) をアクセスする。
